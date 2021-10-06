@@ -1,11 +1,24 @@
+---
+# front matter tells Jekyll to process Liquid
+---
+
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Home</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
-</html>
+</head>
 
+<body>
+
+    {% assign color = "red" %}
+    {% assign size = 10 %}
+    {% if size > 50 %}
+    These {{color}} shoes are awesome.
+    {% else %}
+    These {{color}} shoes are too small.
+    {% endif %}
+</body>
+
+</html>
