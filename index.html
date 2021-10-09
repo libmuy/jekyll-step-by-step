@@ -1,24 +1,21 @@
 ---
-# front matter tells Jekyll to process Liquid
+title: "Home page"
+data:
+    color: red
+    size: 100
 ---
 
 <!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>{{page.title}}</title>
 </head>
-
 <body>
-
-    {% assign color = "red" %}
-    {% assign size = 10 %}
-    {% if size > 50 %}
-    These {{color}} shoes are awesome.
+    {% if page.data.size > 50 %}
+    These {{page.data.color}} shoes are awesome.
     {% else %}
-    These {{color}} shoes are too small.
+    These {{page.data.color}} shoes are too small.
     {% endif %}
 </body>
-
 </html>
